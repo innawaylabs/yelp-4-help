@@ -101,7 +101,7 @@
                                                 <constraint firstItem="ixG-K7-lkO" firstAttribute="leading" secondItem="quo-mt-GVI" secondAttribute="trailing" constant="4" id="DJ7-fU-d7k"/>
                                                 <constraint firstItem="quo-mt-GVI" firstAttribute="leading" secondItem="IAA-zW-VlU" secondAttribute="trailing" constant="8" id="Eop-T4-OyB"/>
                                                 <constraint firstAttribute="trailing" secondItem="0lB-P8-BjC" secondAttribute="trailing" constant="8" id="F9X-BZ-iJQ"/>
-                                                <constraint firstItem="JQI-K1-MyN" firstAttribute="baseline" secondItem="quo-mt-GVI" secondAttribute="baseline" id="HaF-Wz-m6U"/>
+                                                <constraint firstItem="JQI-K1-MyN" firstAttribute="top" secondItem="0lB-P8-BjC" secondAttribute="bottom" constant="4" id="IMt-bC-Q04"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rlE-81-H19" secondAttribute="bottom" constant="12" id="Jfd-3K-Gc6"/>
                                                 <constraint firstItem="D6D-9i-Apv" firstAttribute="top" secondItem="KZg-mT-okm" secondAttribute="top" constant="8" id="JvO-fU-WEe"/>
                                                 <constraint firstItem="0lB-P8-BjC" firstAttribute="baseline" secondItem="D6D-9i-Apv" secondAttribute="baseline" id="T0u-7l-N0S"/>
@@ -216,7 +216,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filters" id="qQe-00-XXq">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iWU-WJ-glD"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iWU-WJ-glD">
+                            <connections>
+                                <action selector="onCancelButton:" destination="xUZ-Ul-HoT" id="rwf-6T-yVA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="jnn-AE-t4D">
                             <connections>
                                 <action selector="onSearchButton:" destination="xUZ-Ul-HoT" id="UCI-Sf-nzD"/>
@@ -225,7 +229,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="filtersTableView" destination="8JO-hI-BAf" id="WTB-Jd-AHT"/>
-                        <outlet property="onCancelButton" destination="iWU-WJ-glD" id="e45-RF-XvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5c-ac-Daq" userLabel="First Responder" sceneMemberID="firstResponder"/>
